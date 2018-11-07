@@ -1,0 +1,309 @@
+/*  styles.css
+    Victoria Jones
+    10/17/2018
+    GIT418
+*/
+/*imports*/
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Open+Sans");
+/*variables*/
+/*colors*/
+/*fonts*/
+/*mixins*/
+/*global*/
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 2em 5em; }
+  body a {
+    color: #00B2A1;
+    font-weight: bold; }
+    body avisited {
+      color: #00B2A1; }
+
+header {
+  text-align: center;
+  line-height: 1.1; }
+  header a {
+    text-decoration: none;
+    color: #000; }
+  header .logo {
+    font-family: "Fugaz One", cursive;
+    font-size: 1.3em;
+    color: #00B2A1; }
+  header .websiteHeader {
+    font-size: .6em; }
+
+nav {
+  width: 90%;
+  margin: 0 auto; }
+  nav a {
+    text-decoration: none;
+    color: #000; }
+  nav .currentPg {
+    color: #00B2A1;
+    font-weight: bold;
+    font-size: 1.1em; }
+  nav ul {
+    list-style-type: none;
+    text-align: center; }
+    nav ul li {
+      display: inline-block;
+      padding: 0 3em; }
+
+h2.pageTitle {
+  text-align: center;
+  margin: 2em 0 -.3em 0;
+  color: #00B2A1;
+  font-weight: bold;
+  font-size: 2em;
+  background-color: #fff; }
+
+hr {
+  border-top: medium double;
+  color: #00B2A1; }
+
+h3.pageSubtitle {
+  text-align: center;
+  margin: -.6em 0 2em 0;
+  font-size: .9em;
+  letter-spacing: .2em; }
+
+/* home */
+#where {
+  text-align: center;
+  color: #fff;
+  background-color: #00B2A1;
+  padding: 2em; }
+  #where h4, #where p {
+    margin: 0; }
+  #where h4 {
+    font-size: 1.3em; }
+  #where #yourPos {
+    background-color: #fff;
+    color: #00B2A1;
+    padding: 2em;
+    max-width: 50%;
+    margin: 0 auto;
+    display: none; }
+
+/*book a service*/
+#signUp {
+  text-align: center;
+  color: #fff;
+  background-color: #00B2A1;
+  padding: 2em; }
+  #signUp h4, #signUp p {
+    margin: 0; }
+  #signUp h4, #signUp legend {
+    font-size: 1.3em; }
+
+#confirmation {
+  display: none;
+  text-align: center; }
+  #confirmation h3 {
+    font-family: "Fugaz One", cursive;
+    font-size: 2em;
+    color: #00B2A1; }
+
+input[type=button] {
+  width: 8em;
+  height: 3em;
+  margin: 1em;
+  color: #00B2A1;
+  font-weight: bold;
+  background-color: #fff;
+  border: 0; }
+  input[type=button]:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: solid 0.2em #fff;
+    color: #fff; }
+
+#lastServForm {
+  width: 100%;
+  text-align: center; }
+
+#scheduleForm {
+  border-style: none solid solid solid;
+  border-width: .2em;
+  border-color: rgba(0, 0, 0, 0.2); }
+
+form {
+  font-size: .9em;
+  padding: 2em;
+  width: 100%;
+  margin: 0 auto; }
+  form fieldset {
+    border: none; }
+  form legend {
+    font-weight: bold; }
+  form label {
+    color: #00B2A1; }
+  form .formRight {
+    float: left;
+    width: 45%;
+    margin-left: 3em; }
+  form .formLeft {
+    float: left;
+    width: 45%;
+    margin-left: 3em;
+    border-style: none solid none none;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-width: .15em; }
+  form .formCenter {
+    width: 90%;
+    clear: both;
+    display: inline-block;
+    text-align: center; }
+  form #submitBtn {
+    width: 8em;
+    height: 3em;
+    margin: 1em;
+    color: #fff;
+    font-weight: bold;
+    background-color: #00B2A1;
+    border: 0; }
+    form #submitBtn:hover {
+      cursor: pointer;
+      background-color: #fff;
+      border: solid 0.2em #00B2A1;
+      color: #00B2A1; }
+  form input[type=text], form input[type=email], form input[type=number] {
+    width: 15em;
+    padding: .5em;
+    margin: 1em;
+    color: #000;
+    font-weight: bold;
+    background-color: #fff;
+    border: solid 0.15em #00B2A1; }
+
+.errP {
+  font-weight: bold;
+  color: red; }
+
+#lastServCal {
+  display: none;
+  font-size: .9em;
+  position: absolute;
+  top: 20em;
+  left: 20%;
+  background-color: #fff;
+  border: solid 0.3em rgba(0, 0, 0, 0.2); }
+  #lastServCal #prev {
+    float: left; }
+  #lastServCal #next {
+    float: right; }
+  #lastServCal #prev, #lastServCal #next {
+    width: 5em;
+    height: 1em;
+    color: #00B2A1;
+    background-color: #fff;
+    border: 0;
+    text-align: center;
+    padding: .5em; }
+    #lastServCal #prev:hover, #lastServCal #next:hover {
+      cursor: pointer;
+      background-color: #00B2A1;
+      border: solid 0.2em #fff;
+      color: #fff; }
+  #lastServCal table {
+    font-size: 1em; }
+    #lastServCal table caption {
+      font-weight: bold;
+      font-size: 1.3em;
+      color: #00B2A1; }
+    #lastServCal table td.past {
+      color: #00B2A1;
+      background-color: #fff;
+      border: 0;
+      text-align: center; }
+      #lastServCal table td.past:hover {
+        cursor: pointer;
+        background-color: #00B2A1;
+        border: solid 0.1em #fff;
+        color: #fff; }
+
+#calendar {
+  display: none;
+  font-size: .9em;
+  position: absolute;
+  top: 40em;
+  left: 20%;
+  background-color: #fff;
+  border: solid 0.3em rgba(0, 0, 0, 0.2); }
+  #calendar #prev {
+    float: left; }
+  #calendar #next {
+    float: right; }
+  #calendar #prev, #calendar #next {
+    width: 5em;
+    height: 1em;
+    color: #00B2A1;
+    background-color: #fff;
+    border: 0;
+    text-align: center;
+    padding: .5em; }
+    #calendar #prev:hover, #calendar #next:hover {
+      cursor: pointer;
+      background-color: #00B2A1;
+      border: solid 0.2em #fff;
+      color: #fff; }
+  #calendar table {
+    font-size: 1em; }
+    #calendar table caption {
+      font-weight: bold;
+      font-size: 1.3em;
+      color: #00B2A1; }
+    #calendar table td.future {
+      color: #00B2A1;
+      background-color: #fff;
+      border: 0;
+      text-align: center; }
+      #calendar table td.future:hover {
+        cursor: pointer;
+        background-color: #00B2A1;
+        border: solid 0.1em #fff;
+        color: #fff; }
+
+#close {
+  width: 5em;
+  height: 1em;
+  color: #00B2A1;
+  background-color: #fff;
+  border: 0;
+  text-align: center;
+  padding: .5em; }
+  #close:hover {
+    cursor: pointer;
+    background-color: #00B2A1;
+    border: solid 0.2em #fff;
+    color: #fff; }
+
+#timerHeading {
+  display: none;
+  text-align: center; }
+  #timerHeading .timerNum {
+    color: #00B2A1;
+    font-weight: bold; }
+  #timerHeading h4 {
+    font-family: "Fugaz One", cursive;
+    font-size: 2em;
+    color: #00B2A1; }
+
+/* formtable page */
+#formTable table {
+  padding: .5em; }
+  #formTable table th {
+    color: #00B2A1; }
+  #formTable table td {
+    padding: .5em; }
+  #formTable table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.2); }
+
+/*footer*/
+footer {
+  margin-top: 2em;
+  width: 100%;
+  padding: 5em 0;
+  background-color: #00B2A1;
+  color: #fff;
+  text-align: center; }

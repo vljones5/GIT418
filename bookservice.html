@@ -1,0 +1,197 @@
+<!doctype hmtl>
+<html lang="en">
+<head>
+  <!--
+    GIT 418:  bookservice.html
+    Author:   Victoria Jones
+    Date:     11/01/2018
+  -->
+  <meta charset="utf-8" />
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <![endif]--><!--shiz for IE9 and less, that do not support HTML5-->
+  <meta name="description" content="book a service appointment with The Tail Waggon Mobile Pet Grooming" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <title>Book a Service</title>
+</head>
+<body>
+  <header>
+    <a href="#"><h1><span class="websiteHeader headerFirst">The</span><br /> <span class="logo">Tail Waggon</span><br /> <span class="websiteHeader headerSecond">Mobile Grooming</span></h1></a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="#">services</a></li>
+      <li><a href="#">contact</a></li>
+      <li class="currentPg"><a href="#">book a service</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 class="pageTitle">Book a Service</h2>
+    <hr />
+    <h3 class="pageSubtitle">We bring the groomers to you <img src="" /></h3>
+
+    <section id="signUp">
+      <h4>Do you have an account?</h4>
+      <p>let's skip the form next time!</p>
+      <input type="button" class="signUpBtn" value="login" />
+      <span id="loginOrSignup">or</span>
+      <input type="button" class="signUpBtn" value="register" />
+    </section>
+
+    <section id="scheduleForm">
+        <form id="groomingForm">
+          <div class="formLeft">
+          <fieldset>
+            <legend>Pick a date for service</legend>
+            <input id="servDate" type="text" />
+            <p id="dateErr" class="errP"></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Pet</legend>
+            <input type="radio" id="dog" name="petType" />
+            <label for="dog">Dog</label>
+            <input type="radio" id="cat" name="petType" />
+            <label for="cat">Cat</label>
+            <p id="petErr" class="errP"></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Pet Size</legend>
+            <input type="radio" id="small" name="petSize" />
+            <label for="small">Small</label>
+            <input type="radio" id="medium" name="petSize" />
+            <label for="med">Medium</label>
+            <input type="radio" id="large" name="petSize" />
+            <label for="large">Large</label>
+            <p id="petSErr" class="errP"></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Grooming Package</legend>
+            <select>
+              <option value="none">Select a Service Package</option>
+              <option value="groomingBasic">Grooming with bath</option>
+              <option value="groomingNail">Grooming with nail trimming</option>
+              <option value="groomingTooth">Grooming with tooth brushing</option>
+              <option value="bathNail">Bath with nail trimming</option>
+              <option value="bathTooth">Bath with toothbrushing</option>
+              <option value="complete">Complete grooming package</option>
+            </select>
+            <p id="pckgErr" class="errP"></p>
+          </fieldset>
+        </div> <!-- form left-->
+        <div class="formRight">
+          <fieldset>
+            <legend>Personal Information</legend>
+              <label for="petName">Pet Name</label><br />
+              <input type="text" id="petName" /><br />
+              <p id="pnameErr" class="errP"></p>
+              <label for="addr">Street Address</label><br />
+              <input type="text" id="addr" /><br />
+              <p id="adrErr" class="errP"></p>
+              <label for="phone">Phone Number</label><br />
+              <input type="text" id="phone" /><br />
+              <p id="phoneErr" class="errP"></p>
+              <label for="email">Email</label><br />
+              <input type="email" id="email" /><br />
+              <p id="emailErr" class="errP"></p>
+          </fieldset>
+        </div>
+        <div class="formCenter">
+          <input id="submitBtn" type="button" value="book" />
+        </div>
+        </form>
+        <div id="calendar">
+           <div class="calHead" id="prev">&lt; previous</div>
+           <div class="calHead" id="next">next &gt;</div>
+           <table>
+              <caption id="monthTitle"></caption>
+              <tr>
+                 <th>Sun</th>
+                 <th>Mon</th>
+                 <th>Tue</th>
+                 <th>Wed</th>
+                 <th>Thu</th>
+                 <th>Fri</th>
+                 <th>Sat</th>
+              </tr>
+              <tr>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+              </tr>
+              <tr>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+              </tr>
+              <tr>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+              </tr>
+              <tr>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+              </tr>
+              <tr>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+              </tr>
+              <tr>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+              </tr>
+           </table>
+           <span id="close">close &#9746;</span>
+        </div>
+    </section>
+    <section id="confirmation">
+      <h3>Your Appointment Has Been Booked</h3>
+      <p>Thank you! We look forward to seeing <span id="yourPetHere"></span> soon!</p>
+    </section>
+
+    <hr />
+    <img src="" />
+
+  </main>
+
+  <footer>
+    <small>This is not a real website. <b>The Tail Waggon Mobile Grooming</b> is a fictitious company designed for educational purposes.</small>
+  </footer>
+  <script src="javascript/validateform.js"></script>
+</body>
+</html>
