@@ -1,7 +1,7 @@
 /*
   GIT 418:  getPosition.js
   Author:   Victoria Jones
-  Date:     11/07/2018
+  Date:     11/20/2018
 */
 
 "use strict";
@@ -9,9 +9,14 @@
 //after get position button is clicked this runs
 function getPosition () {
   //remove any current information from p element
+  /*
   let currentPos = document.getElementById("yourPos");
   currentPos.innerHTML = "";
   currentPos.style.display = "none";
+  */
+  //jQuery alternative script
+  $("#yourPos").html("");
+  $("#yourPos").hide();
 
   //test googlemaps
   mapsTest();
@@ -34,32 +39,51 @@ function displayPosition (position) { //position takes the geolocation object fr
   //store latitude and longitude information taken from user in the position object
   let yourLng = position.coords.longitude;
   let yourLat = position.coords.latitude;
-  //display the user latitude and longitude 
+  //display the user latitude and longitude
+  /*
   let currentPos = document.getElementById("yourPos");
   currentPos.innerHTML = "<b>You are currently located at:</b> <br /><b>Latitude:</b> " + yourLat + "<br /><b>Longitude:</b> " + yourLng;
   currentPos.style.display = "block";
+  */
+  //jQuery alt script
+  $("#yourPos").html("<b>You are currently located at:</b> <br /><b>Latitude:</b> " + yourLat + "<br /><b>Longitude:</b> " + yourLng);
+  $("#yourPos").show();
 }
 
 //a failure function to tell the user something went wrong
 function requestFail () {
+  /*
   let currentPos = document.getElementById("yourPos");
   currentPos.innerHTML = "uh oh. <br /> We could not get your current positions at this time.";
   currentPos.style.display = "block";
+  */
+  //jQuery alt script
+  $("#yourPos").html("uh oh. <br /> We could not get your current positions at this time.");
+  $("#yourPos").show();
 }
 
 //event listener
 function createEventListener () {
+  /*
   let getPosBtn = document.getElementsByClassName("getCrdBtn")[0];
   if (getPosBtn.addEventListener) {
     getPosBtn.addEventListener("click", getPosition, false);
   } else if (getPosBtn.attachEvent) {
     getPosBtn.attachEvent("onclick", getPosition);
   }
+  */
+  //jQuery alt script
+  $(".getCrdBtn").first().click(getPosition);
+
 }
 
 //on page load
+/*
 if (window.addEventListener) {
   window.addEventListener("load", createEventListener, false);
 } else if (window.attachEvent) {
   window.attachEvent("onload", createEventListener);
 }
+*/
+//jQuery alt script
+$(window).ready(createEventListener);
