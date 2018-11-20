@@ -2,6 +2,9 @@
   GIT 418:  api.js
   Author:   Victoria Jones
   Date:     11/14/2018
+
+  alternate script using JOSNP
+  not PHP
 */
 
 "use strict";
@@ -29,8 +32,13 @@ function getDogPic () {
     httpRequest = getRequestObject(); //if false create an xmlhttprequest object
   }
 
+  let dogApiUrl = "https://api.thedogapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=1";
+
   httpRequest.abort(); //end any current request before starting a new one
-  httpRequest.open("get","api.php?"); //get info from request with GET
+  httpRequest.open("get", dogApiUrl); //get info from request with GET
+  //headers were originally in php, now moved here
+  httpRequest.setRequestHeader("Content-Type", "application/json");
+  httpRequest.setRequestHeader("x-api-key", "525261bd-c098-4d434-ac0d-41e3f97adae0");
   httpRequest.send(null); //GET used, so this is needs to be set ot null
 
   httpRequest.onreadystatechange = displayDogPic; //change "onreadystatechange" of the xml object to displayDogPic, when ready that function will run
